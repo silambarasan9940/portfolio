@@ -57,6 +57,9 @@ const App = () => {
       gradient2:
         "radial-gradient(ellipse at left,  #dddddd 0%,  rgba(255, 255, 255, 0) 70%)",
     },
+    images: {
+      background: "/assets/2175351.jpg",
+    },
   };
   const darkTheme = {
     colors: {
@@ -100,6 +103,9 @@ const App = () => {
         "radial-gradient(ellipse at top,rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%)",
       gradient2:
         "radial-gradient(at left center, rgba(197, 202, 213, 0.15) 0%, rgba(255, 255, 255, 0) 70%);",
+    },
+    images: {
+      background: "/assets/5153829.jpg",
     },
   };
 

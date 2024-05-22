@@ -17,15 +17,9 @@ function Navbar() {
   return (
     <Wrapper>
       <div className={sidebar ? "header sidebar-active" : "header"}>
-        <div className="menu-btn">
+        <div className="menu-btn" style={{ backgroundColor: "green" }}>
           <NavLink className="nav-link link" to="/">
-            <img
-              src="/assets/logo.jpg"
-              width="244"
-              height="258"
-              alt="logo"
-              loading="lazy"
-            />
+            <h1 className="text-white font-24">S</h1>
           </NavLink>
           <div className="toggle-btn">
             <Toggler />

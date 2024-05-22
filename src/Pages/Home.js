@@ -18,9 +18,9 @@ const Home = () => {
           <div className="slide"></div>
           <div className="image">
             <img
-              src="/assets/profile(1).jpg"
-              width="936"
-              height="936"
+              src="/assets/profile.png"
+              width="200px"
+              height="200px"
               alt="profile"
               loading="lazy"
             />
@@ -164,7 +164,7 @@ const Wrapper = styled.section`
         top: 0;
         width: 100%;
         height: 52%;
-        background-image: url("/assets/mountain.jpg");
+        background-image: url(${({ theme }) => theme.images.background});
         background-color: ${({ theme }) => theme.colors.white};
         background-repeat: no-repeat;
         background-position: 50% 0%;
@@ -196,7 +196,8 @@ const Wrapper = styled.section`
         position: relative;
         display: inline-block;
         margin: 80px 0 20px 0;
-        width: 146px;
+        width: 186px;
+        height: auto;
         img {
           position: relative;
           display: block;
