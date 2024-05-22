@@ -16,15 +16,7 @@ const Home = () => {
       <section className="card-section home-card">
         <div className="profile">
           <div className="slide"></div>
-          <div className="image">
-            <img
-              src="/assets/profile(1).jpg"
-              width="936"
-              height="936"
-              alt="profile"
-              loading="lazy"
-            />
-          </div>
+          <div className="image"></div>
           <div className="title" data-aos="fade-up">
             <h1>Silambarasan B</h1>
           </div>
