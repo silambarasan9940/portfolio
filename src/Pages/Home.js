@@ -28,13 +28,21 @@ const Home = () => {
           <div className="title" data-aos="fade-up">
             <h1>Silambarasan B</h1>
           </div>
+
+          <p className="mb-0">
+            gmail :{" "}
+            <a href="mailto:silambarasan16dpi@gmail.com">
+              silambarasan16dpi@gmail.com
+            </a>
+          </p>
+          <p className="mb-0">Phone : 9940990329 </p>
           <div className="subtitle subtitle-typed">
             <TypeWriterEffect
               textStyle={{
                 fontFamily: "Red Hat Display",
                 color: "#78cc6d",
                 fontWeight: 700,
-                fontSize: "18px",
+                fontSize: "24px",
               }}
               startDelay={2000}
               cursorColor="#78cc6d"
@@ -44,10 +52,11 @@ const Home = () => {
               multiTextLoop
             />
           </div>
+
           <div className="social">
             <a
               className="link"
-              href="https://www.facebook.com/narender.singhbisht.3538"
+              href="/"
               rel="noreferrer"
               target="_blank"
               aria-label="facebook"
@@ -56,7 +65,7 @@ const Home = () => {
             </a>
             <a
               className="link"
-              href="https://www.instagram.com/artist_narender/"
+              href="/"
               rel="noreferrer"
               target="_blank"
               aria-label="instagram"
@@ -65,7 +74,7 @@ const Home = () => {
             </a>
             <a
               className="link"
-              href="https://www.linkedin.com/in/narender-singh-bisht-4529051b7/"
+              href="/"
               rel="noreferrer"
               target="_blank"
               aria-label="linkedin"
@@ -75,7 +84,7 @@ const Home = () => {
 
             <a
               className="link"
-              href="https://github.com/narendercoder"
+              href="/"
               rel="noreferrer"
               target="_blank"
               aria-label="github"
@@ -85,7 +94,7 @@ const Home = () => {
           </div>
           <div className="links">
             <a
-              href="/assets/Resume.pdf"
+              href="/"
               className="link"
               rel="noreferrer"
               target="_blank"
@@ -197,12 +206,12 @@ const Wrapper = styled.section`
         display: inline-block;
         margin: 80px 0 20px 0;
         width: 186px;
-        height: auto;
+        height: 186px;
         img {
           position: relative;
           display: block;
           width: 100%;
-          height: auto;
+          height: 100%;
           border: 3px solid ${({ theme }) => theme.colors.white};
           border-radius: 50%;
         }
@@ -231,7 +240,7 @@ const Wrapper = styled.section`
       }
       .social {
         position: relative;
-        margin: 16px 0 0 0;
+        margin: 24px 0;
 
         a {
           position: relative;

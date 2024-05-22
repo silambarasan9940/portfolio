@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Services } from "../Config/Config";
 import styled from "styled-components";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 function About() {
   const [age, setAge] = useState("");
   const yearOfBirth = "1989";
+
   const getAge = () => {
     setAge(new Date().getFullYear() - yearOfBirth);
   };
@@ -24,41 +26,93 @@ function About() {
               <div className="col col-6 border-line-v">
                 <div className="text-box" data-aos="fade-up">
                   <p>
-                    <b>I'm</b>{" "}
-                    {new Date().getFullYear() <= 2024
-                      ? ` a ${new Date().getFullYear() - 2020}${
-                          new Date().getFullYear() < 4 ? "th" : "rd"
-                        } year B.tech student pursuing `
-                      : "graduated"}
-                    Electrical and Electronics Engineering from Maharaja Agrasen
-                    Institute of Technology. I like Doing coding and making web
-                    development related projects the simple and minimalistic
-                    design and I also love learning new things and technologies.
-                    I'm also a digital artist by passion.
+                    <b>Hello! I'm Silambarasan,</b> a passionate and dedicated
+                    web designer and front-end developer with over 5 years of
+                    experience crafting visually stunning and user-friendly
+                    websites. My journey in web design and development has been
+                    fueled by a love for creativity and a deep understanding of
+                    technology, enabling me to bring ideas to life in the
+                    digital world.
                   </p>
                 </div>
-              </div>
-              <div className="col col-6 border-line-v">
-                <div className="info-list" data-aos="fade-up">
-                  <ul>
-                    <li>
-                      <strong>Age: </strong>
-                      {age}
-                    </li>
-                    <li>
-                      <strong>Birthday: </strong>16 April 1989
-                    </li>
-                    <li>
-                      <strong>Hometown: </strong>Dharmapuri
-                    </li>
-                    <li>
-                      <strong>Gmail: </strong>silambarasan16dpi@gmail.com
-                    </li>
-                    <li>
-                      <strong>Residence: </strong>Chennai, Tamil Nadu
-                    </li>
-                  </ul>
+                <div className="title" data-aos="fade-up">
+                  <span className="first-word">My </span>
+                  Expertise
                 </div>
+                <p style={{ paddingTop: "1rem" }}>
+                  Over the past five years, I've honed my skills in various
+                  areas, including:
+                </p>
+                <ul style={{ paddingLeft: "0px" }}>
+                  <li className="d-flex" style={{ paddingTop: "1rem" }}>
+                    <span>
+                      <FaAngleDoubleRight
+                        style={{ color: "rgb(120, 204, 109" }}
+                      />
+                    </span>
+                    <span>
+                      <b style={{ paddingLeft: "0.5rem" }}>
+                        Responsive Web Design:
+                      </b>{" "}
+                      Creating websites that look and function seamlessly across
+                      all devices.
+                    </span>
+                  </li>
+                  <li className="d-flex" style={{ paddingTop: "1rem" }}>
+                    <span>
+                      <FaAngleDoubleRight
+                        style={{ color: "rgb(120, 204, 109" }}
+                      />
+                    </span>
+                    <span>
+                      <b style={{ paddingLeft: "0.5rem" }}>
+                        HTML, CSS, and JavaScript:
+                      </b>{" "}
+                      Building clean, efficient, and scalable code to ensure
+                      optimal performance
+                    </span>
+                  </li>
+                  <li className="d-flex" style={{ paddingTop: "1rem" }}>
+                    <span>
+                      <FaAngleDoubleRight
+                        style={{ color: "rgb(120, 204, 109" }}
+                      />
+                    </span>
+                    <span>
+                      <b style={{ paddingLeft: "0.5rem" }}>
+                        Frameworks and Libraries:
+                      </b>{" "}
+                      Proficient in React to develop dynamic and interactive web
+                      applications.
+                    </span>
+                  </li>
+                  <li className="d-flex" style={{ paddingTop: "1rem" }}>
+                    <span>
+                      <FaAngleDoubleRight
+                        style={{ color: "rgb(120, 204, 109" }}
+                      />
+                    </span>
+                    <span>
+                      <b style={{ paddingLeft: "0.5rem" }}>Version Control:</b>{" "}
+                      Utilizing Git and GitHub for efficient project
+                      collaboration and version management.
+                    </span>
+                  </li>
+                  <li className="d-flex" style={{ paddingTop: "1rem" }}>
+                    <span>
+                      <FaAngleDoubleRight
+                        style={{ color: "rgb(120, 204, 109" }}
+                      />
+                    </span>
+                    <span>
+                      <b style={{ paddingLeft: "0.5rem" }}>
+                        Cross-Browser Compatibility:
+                      </b>{" "}
+                      Ensuring consistent functionality and appearance across
+                      different web browsers.
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

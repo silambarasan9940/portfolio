@@ -56,7 +56,9 @@ const App = () => {
         "radial-gradient(ellipse at center,  #dddddd 0%,  rgba(255, 255, 255, 0) 70%)",
       gradient2:
         "radial-gradient(ellipse at left,  #dddddd 0%,  rgba(255, 255, 255, 0) 70%)",
+      gradient3: "-webkit-linear-gradient(#eee, #333))",
     },
+
     images: {
       background: "/assets/2175351.jpg",
     },
