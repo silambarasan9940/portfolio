@@ -167,7 +167,7 @@ export const Education = [
     id: 2,
     date: "2007 - 2009",
     name: "Diploma Electronics and Communication Engineering",
-    company: "LaxmiNarayan Politechnic College",
+    company: "LaxmiNarayana Politechnic College",
     desc: "Completed Diploma Electronics and Communication Engineering",
   },
   {
