@@ -181,7 +181,7 @@ export const Experience = [
     ],
   },
   {
-    id: "2",
+    id: "3",
     date: "June 2022 - Present",
     name: "FrontEnd Developer",
     company: "TiSteps Pvt Limited",
