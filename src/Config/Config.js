@@ -161,7 +161,7 @@ export const Education = [
     date: "2010 - 2013",
     name: "Electronics and Communication Engineering",
     company: "Pavaai Engineering College",
-    desc: "Completed B.E Degree in  Electronics and Communication Engineering, Pavvai Engnieering College , Nammakal, Tamil Nadu",
+    desc: "Completed B.E Degree in  Electronics and Communication Engineering, Pavaai Engnieering College , Nammakal, Tamil Nadu",
   },
   {
     id: 2,
