@@ -11,19 +11,15 @@ import "aos/dist/aos.css";
 import Contact from "./Pages/Contact";
 import Header from "./Components/Header";
 
-
 AOS.init({
   once: true,
   duration: 1000,
   offset: -200,
 });
 
-
-const Content = () =>{
-  
-
+const Content = () => {
   return (
-     <BrowserRouter>
+    <BrowserRouter>
       <>
         <div className="container">
           <Routes>
@@ -42,8 +38,7 @@ const Content = () =>{
       </>
       <Footer />
     </BrowserRouter>
-
   );
-}
+};
 
 export default Content;
