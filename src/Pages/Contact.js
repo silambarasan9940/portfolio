@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   const [userData, setUserData] = useState({
@@ -17,43 +18,37 @@ function Contact() {
 
     setUserData({ ...userData, [name]: value });
   };
-  // connect with firebase
-  const submitData = async (event) => {
-    event.preventDefault();
-    const { firstName, lastName, email, address, message } = userData;
-    if (firstName && lastName && email && address && message) {
-      const res = fetch(
-        "https://my-portfolio-9090c-default-rtdb.firebaseio.com/userDataRecords.json",
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName,
-            lastName,
-            email,
-            address,
-            message,
-          }),
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_2rdrhgf",
+        "template_n0n2pfn",
+        form.current,
+        "VBUf5zHwT7ZlnlODs"
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          alert("Thanks, your message is sent successfully.");
+          setUserData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            address: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Failed to send the message. Please try again.");
         }
       );
-      if (res) {
-        setUserData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          address: "",
-          message: "",
-        });
-        alert("Thanks, your message is sent successfully.");
-      } else {
-        alert("Please fill the data!");
-      }
-    } else {
-      alert("Please fill the data!");
-    }
   };
+
   return (
     <Wrapper>
       <section className="card-inner contacts" id="contacts-card">
@@ -67,7 +62,13 @@ function Contact() {
               <div className="row">
                 <div className="col col-12 border-line-v">
                   <div className="contact_form">
-                    <form id="cform" method="post" noValidate="novalidate">
+                    <form
+                      ref={form}
+                      onSubmit={sendEmail}
+                      id="cform"
+                      method="post"
+                      noValidate="novalidate"
+                    >
                       <div className="row">
                         <div className="col col-6">
                           <div className="group-val">
@@ -77,6 +78,7 @@ function Contact() {
                               placeholder="First Name"
                               value={userData.firstName}
                               onChange={postUserData}
+                              required
                             ></input>
                           </div>
                         </div>
@@ -88,17 +90,19 @@ function Contact() {
                               placeholder="Last Name"
                               value={userData.lastName}
                               onChange={postUserData}
+                              required
                             ></input>
                           </div>
                         </div>
                         <div className="col col-6">
                           <div className="group-val">
                             <input
-                              type="text"
+                              type="email"
                               name="email"
                               placeholder="Email Address"
                               value={userData.email}
                               onChange={postUserData}
+                              required
                             ></input>
                           </div>
                         </div>
@@ -110,6 +114,7 @@ function Contact() {
                               placeholder="Address"
                               value={userData.address}
                               onChange={postUserData}
+                              required
                             ></input>
                           </div>
                         </div>
@@ -120,12 +125,13 @@ function Contact() {
                               placeholder="Your Message"
                               value={userData.message}
                               onChange={postUserData}
+                              required
                             ></textarea>
                           </div>
                         </div>
                       </div>
                       <div className="align-left">
-                        <button className="button" onClick={submitData}>
+                        <button type="submit" className="button">
                           <span className="text">Send Message</span>
                           <span className="icon">
                             <FaTelegramPlane />
